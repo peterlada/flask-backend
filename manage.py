@@ -22,8 +22,9 @@ manager.add_command('db', MigrateCommand)
 @manager.command
 def runserver():
     '''Overrides the default runserver command'''
-    app = create_app()
-    app.run()
+    app.run(debug=app.debug,
+            host=app.config['HOST'],
+            port=app.config['PORT'])
 
 
 @manager.shell

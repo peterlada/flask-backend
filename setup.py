@@ -12,6 +12,7 @@ requires = [
     'Flask-SqlAlchemy',
     'Flask-SSLify',
     'Flask-Mail',
+    'raven',
 ]
 
 setup(
